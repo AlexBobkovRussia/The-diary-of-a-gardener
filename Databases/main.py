@@ -1,3 +1,4 @@
+# Импорт модуля psycopg2
 from psycopg2 import *
  
 DB_NAME = "Users"
