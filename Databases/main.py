@@ -13,7 +13,19 @@ try:
                             password=DB_PASS,
                             host=DB_HOST,
                             port=DB_PORT)
+    conn.autocommit = True
     print("Database connected successfully")
+    cur = conn.cursor()
+# id BIGINT NOT NULL PRIMARY KEY,
+    cur.execute('''ALTER TABLE users
+                ADD login VARCHAR() NOT NULL;
+                ADD password VARCHAR() NOT NULL''')
+
 except:
     print("Database not connected successfully")
-    
+
+finally:
+    if conn:
+        cur.close()
+        conn.close()
+        print(f"[INFO] Соединение с базой данных '{conn}' закрыто.")
