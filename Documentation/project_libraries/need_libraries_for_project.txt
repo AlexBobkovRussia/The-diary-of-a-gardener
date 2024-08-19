@@ -1,0 +1,19 @@
+certifi           ==2024.7.4
+charset-normalizer==3.3.2
+CTkListbox        ==1.4
+customtkinter     ==5.2.2
+darkdetect        ==0.8.0
+docx              ==0.2.4
+fpdf              ==1.7.2
+idna              ==3.7
+lxml              ==5.3.0
+packaging         ==24.1
+phonenumbers      ==8.13.43
+pillow            ==10.4.0
+pip               ==24.2
+psycopg2          ==2.9.9
+requests          ==2.32.3
+screeninfo        ==0.8.1
+sockets           ==1.0.0
+spire             ==0.4.2
+urllib3           ==2.2.2

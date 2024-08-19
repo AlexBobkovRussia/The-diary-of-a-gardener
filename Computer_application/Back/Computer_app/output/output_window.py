@@ -2,7 +2,7 @@ import sys
 
 sys.path.append('')
 from tkinter import Tk, Label, Button, Entry, END
-from Computer_application.to_sort.generate_passwords import generate_password
+from Computer_application.Back.generate_passwords import generate_password
 import os
 
 # from Computer_app.the_screensaver.start import root

@@ -1,5 +1,7 @@
 import socket
+import sys
 import threading
+
 
 # Сервер
 def server():
@@ -23,6 +25,7 @@ def server():
 
         client_socket.close()
 
+
 # Клиент
 def client():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -37,6 +40,7 @@ def client():
         print(f"Received response: {response}")
 
     client_socket.close()
+
 
 # Запуск сервера и клиента
 if __name__ == '__main__':

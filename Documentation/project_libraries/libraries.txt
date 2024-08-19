@@ -1,0 +1,2 @@
+-r libraries/need_libraries_for_project.txt
+-r libraries/to_developing(don't need).txt

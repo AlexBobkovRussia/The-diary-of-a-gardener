@@ -1,17 +1,18 @@
 import sys
+
 sys.path.append('../..')
 from threading import *
 import socket
 import webbrowser
-
 
 host = socket.gethostbyname(socket.gethostname())
 port = 0
 server = (socket.gethostbyname(socket.gethostname()), 51245)
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.bind((host, port))
-username = 'Леша'
+username = 'Вася'
 s.sendto(('@' + username + " : join chat " + '\n').encode("utf-8"), server)
+
 
 def receving(s):
     while True:
@@ -25,13 +26,15 @@ def receving(s):
         except:
             pass
 
+
 def sending():
     try:
-        message = 'Привет всем! Я Леша!'
+        message = 'Привет всем! Я Вася!'
         if message != '':
             s.sendto(('@' + username + ' : ' + message).encode('utf-8'), server)
     except:
         s.sendto(('@' + username + " : left chat " + '\n').encode("utf-8"), server)
+
 
 thr1 = Thread(target=sending)
 thr1.daemon = True
@@ -42,5 +45,3 @@ thr2 = Thread(target=receving, args=(s,))
 thr2.daemon = True
 thr2.start()
 thr2.join()
-
-
