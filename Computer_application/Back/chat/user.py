@@ -1,10 +1,12 @@
 import sys
+
 sys.path.append('')
 from threading import *
 import socket
 import webbrowser
 
-def user(message = 'Петя'):
+
+def user(message='Петя'):
     host = socket.gethostbyname(socket.gethostname())
     port = 0
     server = (socket.gethostbyname(socket.gethostname()), 51245)
@@ -43,6 +45,5 @@ def user(message = 'Петя'):
     thr2.start()
     thr2.join()
 
+
 user()
-
-

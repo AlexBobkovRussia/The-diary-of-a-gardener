@@ -27,7 +27,7 @@ def convert_txt_to_docx(txt_file_path, docx_file_path):
     return doc
 
 
-convert_txt_to_docx('C:/Users/user/PycharmProjects/Семяна/clear_wariant/Дневник семян.txt',
+convert_txt_to_docx('C:/Users/user/PycharmProjects/Семяна/files/Дневник семян.txt',
                     'C:/Users/user/PycharmProjects/Семяна/doc.docx')
 
 

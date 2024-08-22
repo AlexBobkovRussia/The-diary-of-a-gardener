@@ -1,7 +1,7 @@
 import sys
 
 sys.path.append('')
-from Computer_application.to_sort.Computer_app.analysing.data_analyse import check_on_right_date
+from Computer_application.Back.Computer_app.analysing.data_analyse import check_on_right_date
 import os
 from string import ascii_lowercase
 import re
