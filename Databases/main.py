@@ -16,10 +16,15 @@ try:
     conn.autocommit = True
     print("Database connected successfully")
     cur = conn.cursor()
-# id BIGINT NOT NULL PRIMARY KEY,
-    cur.execute('''ALTER TABLE users
-                ADD login VARCHAR() NOT NULL;
-                ADD password VARCHAR() NOT NULL''')
+    cur.execute('''CREATE TABLE seeds (
+                       id SERIAL PRIMARY KEY,
+                       name VARCHAR(100),
+                       variety VARCHAR(100),
+                       quantity INTEGER,
+                       planting_date DATE,
+                       notes TEXT
+);
+''')
 
 except:
     print("Database not connected successfully")
