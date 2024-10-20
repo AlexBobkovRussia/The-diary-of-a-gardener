@@ -20,3 +20,7 @@ def generate_password():
         if c not in q:
             q += c
     return q
+
+
+if __name__ == '__main__':
+    generate_password()
